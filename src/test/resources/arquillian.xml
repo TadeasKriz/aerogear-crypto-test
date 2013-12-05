@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<arquillian
+    xmlns="http://jboss.org/schema/arquillian"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+    <container qualifier="android" default="true">
+        <configuration>
+            <property name="serialId">036968d7093842fc</property>
+            <!--<property name="logLevel">V</property>-->
+        </configuration>
+    </container>
+
+    <extension qualifier="droidium-native">
+        <property name="serverApk">selendroid-server-0.6.0.apk</property>
+    </extension>
+
+    <extension qualifier="webdriver">
+        <property name="browser">android</property>
+        <property name="remoteAddress">http://localhost:8080/wd/hub</property>
+    </extension>
+</arquillian>
